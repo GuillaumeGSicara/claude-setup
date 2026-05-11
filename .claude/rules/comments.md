@@ -2,11 +2,11 @@
 
 ## Overview
 
-In this project we **avoid `#` comments that try to explain *what* the code deos**.
+In this project we **avoid `#` comments that try to explain *what* the code does**.
 
 Instead we rely on:
 * **Expressive names** for functions, variables and classes.
-* **Docstrings** for any higher-level explanations (module-leve, class-level, or function-level).
+* **Docstrings** for any higher-level explanations (module-level, class-level, or function-level).
 
 This keeps the code self-documenting.
 
@@ -40,7 +40,7 @@ def extract_agent_name(metadata: AgentMetadata) -> str:
 Docstrings are searchable, show up in the IDE hover tips, and are the canonical way to provide explanations in Python.
 
 
-- TODO and FIXME comments are acceptables
+- TODO and FIXME comments are acceptable
 If a piece of code needs future work or a known issue needs to be addressed, it's acceptable to use `# TODO` or `# FIXME` comments to highlight these areas for future developers.
 
 ```python
@@ -65,7 +65,7 @@ if not is_authenticated():
 The comment is redundant because the code is already clear and self-explanatory. 
 
 
-- Comments indicating what a variable of constants does (see `constants.md` for how to properly document constants)
+- Comments indicating what a variable or constant does (see `constants.md` for how to properly document constants)
 ```python
 # Max number of retry attempts for API calls
 MAX_RETRIES: Final[int] = 5
@@ -78,7 +78,7 @@ def extract_agent_name(metadata: AgentMetadata) -> str:
     ...
 ```
 
-- Large subdivision on orchestration code
+- Large subdivision of orchestration code
 ```python
 # ---------------------------------
 # 1️⃣ Page Setup

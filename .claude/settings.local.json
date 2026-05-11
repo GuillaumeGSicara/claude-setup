@@ -9,7 +9,8 @@
       "Bash(uv add:*)",
       "Bash(python -c \"import json; d=json.load\\(open\\(''static/steps.json''\\)\\); print\\(list\\(d.keys\\(\\)\\)\\); print\\(type\\(d.get\\(''catalog'', d.get\\(''etapes''\\)\\)\\)\\)\")",
       "Bash(uv run:*)",
-      "Bash(find /Users/theodo/github/pass-crea-proto/app -type d -name __pycache__ -exec rm -rf {} +)"
+      "Bash(find /Users/theodo/github/pass-crea-proto/app -type d -name __pycache__ -exec rm -rf {} +)",
+      "Bash(rtk ls *)"
     ]
   }
 }

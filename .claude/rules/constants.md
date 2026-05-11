@@ -2,7 +2,7 @@
 
 ## Overview
 
-Project-wide constants belong **only** at the top level of the repo, inside a `constants.py file, or inside a dedicated directory `constants/` if there are many constants. This ensures they are easily discoverable and maintainable.
+Project-wide constants belong **only** at the top level of the repo, inside a `constants.py` file, or inside a dedicated directory `constants/` if there are many constants. This ensures they are easily discoverable and maintainable.
 They serve as the single source of truth for values that never change at runtime (paths, hyper-parameters, external identifiers, etc.). They should be imported and used across the codebase instead of hardcoding values in multiple places.
 
 ## ✅ Correct conventions
