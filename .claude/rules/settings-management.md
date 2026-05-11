@@ -2,15 +2,15 @@
 
 ## Overview
 
-All configuration for this project must be loaded trhough **pydantic-settings*.
+All configuration for this project must be loaded through **pydantic-settings**.
 The single source of truth is the `ProjectSettings` class.
 
-Values are read from a **`.env`** (generated from the provided `.env.template`) file in the project root OR from real envrionment variables (e.g injected at pod bootstrap for a runtime) - **never** by calling `os.getenv` or by hardcoding values in code.
+Values are read from a **`.env`** (generated from the provided `.env.template`) file in the project root OR from real environment variables (e.g injected at pod bootstrap for a runtime) - **never** by calling `os.getenv` or by hardcoding values in code.
 
-## ✅ Correct Convetions
+## ✅ Correct Conventions
 
 ### 1️⃣ Declaring a new setting
-*Add the field to a setting smodel and a placeholder in the `.env.template` file.*
+*Add the field to a settings model and a placeholder in the `.env.template` file.*
 
 ```python
 # settings.py
@@ -46,7 +46,7 @@ class FeatureSettings(ProjectSettings):
 ```
 
 * Inherit from `ProjectSettings`
-* Keep the same `model_config` tso the single `.env` remains the source of truth for all settings
+* Keep the same `model_config` so the single `.env` remains the source of truth for all settings
 
 
 ### 3️⃣ Accessing settings throughout the codebase
@@ -61,12 +61,12 @@ class FeatureSettings(ProjectSettings):
 
 
 **Quick rule of thumb**
-- **Inject** the existing settings objects [`settings` or `state.settings`] into any functon that needs configuration.
+- **Inject** the existing settings objects [`settings` or `state.settings`] into any function that needs configuration.
 - **Never** call `os.getenv` or create a new settings instance inside helpers.
 - **Never** hard-code config value or secrets
 
 
-Following these three steps-decalre the field, optionally subcalss for a feature, and always inject the same settings instance-keeps configuration typed, centralised, and secure across the codebase.
+Following these three steps-declare the field, optionally subclass for a feature, and always inject the same settings instance-keeps configuration typed, centralised, and secure across the codebase.
 
 
 ## 🚫 What **must not** be done (Anti-patterns)
@@ -102,11 +102,11 @@ def process():
 1. **Create/Update Settings**
   * Add any new configuration item to `ProjectSettings` or a feature-specific subclass.
   * Add a matching entry to `.env.template` with a placeholder value.
-2. **Use Dependecy Injection**
+2. **Use Dependency Injection**
   * Pass the settings instance (`settings` or `state.settings`) to any function or component that needs configuration.
   * In Streamlit pages, read the settings via `state.settings` after instantiating `StateHandler`.
 4. **Never Reach Directly into `os.getenv`**
- * If you find a `òs.getenv` call, refactor to move that config item into the settings model and read it from there instead. 
+ * If you find a `os.getenv` call, refactor to move that config item into the settings model and read it from there instead. 
 4. **Secret Handling**
   * For any sensitive values, use `SecretStr` in the settings model and access the raw value with `get_secret_value()`.
   * Never hard-code secrets or read them directly from environment variables in code.

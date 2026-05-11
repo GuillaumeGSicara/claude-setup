@@ -2,7 +2,7 @@
 
 ## Overview
 
-In this project we **avoid writing complex code that is difficult to understand and maintain**. In order to do so, we rely on cyclomatic complexity analysis and a few basic identation rules.
+In this project we **avoid writing complex code that is difficult to understand and maintain**. In order to do so, we rely on cyclomatic complexity analysis and a few basic indentation rules.
 
 We rely on xenon and radon for cyclomatic complexity analysis, and B is the maximum acceptable grade for any function or method. 
 For indentation, deep nesting is frowned upon but situation dependent: use code smells (for loop inside a for loop, if statement inside a for loop, etc.) as a guide to refactor code into smaller, more focused functions.
