@@ -48,6 +48,39 @@ If a piece of code needs future work or a known issue needs to be addressed, it'
 # FIXME: This function currently does not handle empty metadata (see issue #123)
 ```
 
+### 2️⃣ Docstrings document the contract, not the implementation
+
+A docstring tells a caller what they need to know to use the function correctly — behavior, preconditions, postconditions, invariants. It is not the place for implementation history, design rationale, or a map of the surrounding code.
+
+- **Never name another function, class, or module inline as justification.** If understanding this docstring requires jumping to another symbol, that reasoning belongs next to that symbol, not here — and naming a concrete implementation from an interface's docstring leaks it into the abstraction.
+
+```python
+# BAD — a Protocol method naming a concrete adapter
+class FactResolver(Protocol):
+    def research(self, question: str) -> ResearchedAnswer | None:
+        """
+        For a question where asking a search provider to name a value directly risks it silently
+        picking a homonym's answer -- see `AnthropicSirenExtractor`, which reads the free text back
+        out with a separate, narrow call instead of trusting a schema-fill step.
+        """
+        ...
+```
+
+```python
+# GOOD — states the contract only
+class FactResolver(Protocol):
+    def research(self, question: str) -> ResearchedAnswer | None:
+        """
+        Answer `question` as free text, plus every source URL consulted, without structuring it.
+
+        Prefer this over `resolve` when a direct schema-fill risks silently picking a homonym's
+        answer; a caller can then extract the final value with its own narrower step.
+        """
+        ...
+```
+
+- **A single pointer to a design doc is fine; repeating its content is not.** When the contract alone would leave a genuinely non-obvious "why" unanswered, point to the one place that owns it (e.g. `docs/design/03-....md`) instead of narrating it in the docstring.
+- **Decision-log entries don't belong in a docstring.** Sentences like "confirmed with the business on..." or "found through live testing that..." are commit-message or ADR content — a docstring that carries them will drift out of date in place instead of being superseded.
 
 ---
 
@@ -88,3 +121,18 @@ client_setup()
 
 settings: ProjectSettings = load_settings()
 ```
+
+- A docstring that narrates design history and cross-references other symbols instead of stating a contract
+```python
+def stamp_document(values, provenance_type, file_name, page=None):
+    """
+    Stamp every scalar, non-`MissingReason` field of `values` as coming from `file_name`, at `page`.
+
+    Only touches fields whose provenance-mirror type is `Provenance | None` -- a nested model or a
+    list is left at its mirror's own default (all-unresolved), for the caller to fill in
+    explicitly. See e.g. `src.models.extraction_response.stamp_extraction_from_report`, which composes this for
+    every model in the extraction contract, and `src.services.enrichment`, which overwrites the
+    handful of entries a resolved source can outrank the report on.
+    """
+```
+The last two sentences describe *other callers*, not this function's contract — delete them; a reader of `stamp_document` doesn't need to know who calls it to use it correctly.
