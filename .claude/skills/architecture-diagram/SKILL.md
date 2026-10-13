@@ -90,6 +90,12 @@ File layout in `docs/architecture/`:
   does relative to others.
 - Relationship labels describe the **interaction type** (REST, gRPC,
   Kafka topic, S3 read), not implementation details.
+- Colors should largely echo the key components they represent. Use
+  recognizable hyperscaler colors when relevant, such as AWS yellow, Google
+  blue, and Azure blue. Use a technology's characteristic colors when those
+  colors are strongly associated with it. Use neutral colors when no clear
+  component or technology color exists.
+- Do not describe particular tooling that pertains to the developer environment or local setup.
 - Multiple components per layer is fine; clarity beats hierarchy purity.
 
 ## Step 5 — Validate
@@ -105,6 +111,12 @@ inspect locally with `likec4 start docs/architecture`.
 
 ## Notes
 
+- Created artifacts must be self-supporting. Do not reference components,
+  files, or assets outside `docs/architecture/`; copy required resources into
+  that folder and use relative paths. Do not reference files outside of the likeC4 architecture directory, especially design records or other implementation or instructions from the repo or the rest of the context, as this breaks the self-contained nature of the architecture documentation.
+- Reuse architecture icons from the local `public/` folder when a suitable
+  asset exists. Copy the selected asset to `docs/architecture/icons/` before
+  referencing it in the diagram.
 - Custom icons live in `docs/architecture/icons/` and are referenced by
   relative path.
 - Keep `_spec.c4` minimal at first — add styles as the diagram grows.
