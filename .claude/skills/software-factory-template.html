@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root { color-scheme: light; }
+  @page { size: A4 landscape; margin: 0; }
+  html, body { margin: 0; background: #F6F7F9; }
+  body { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 12px; box-sizing: border-box; }
+  .page { width: 100%; max-width: 1190px; aspect-ratio: 1190 / 842; background: #FFFFFF; border-radius: 6px;
+           box-shadow: 0 2px 14px rgba(15,23,42,.08); }
+  svg { width: 100%; height: 100%; display: block; font-family: "Poppins", "Segoe UI", Helvetica, Arial, sans-serif; }
+  @media print { body { background: #FFF; padding: 0; } .page { max-width: none; box-shadow: none; border-radius: 0; width: 297mm; height: 210mm; } }
+  .name { font-size: 10.5px; font-weight: 600; fill: #1F2937; letter-spacing: -0.1px; }
+  .skill { font-size: 8.3px; font-weight: 400; fill: #6B7280; }
+  .sub { font-size: 8.3px; font-weight: 400; fill: #6B7280; }
+  .art { font-size: 9.2px; font-weight: 500; fill: #374151; }
+  .lbl { font-size: 8.3px; fill: #6B7280; }
+  .rw { font-size: 8px; fill: #D9537A; font-weight: 500; }
+  .halo { paint-order: stroke; stroke: #FAFBFC; stroke-width: 5px; stroke-linejoin: round; }
+  .leg { font-size: 8.8px; fill: #374151; }
+  .done { font-size: 12px; font-weight: 600; fill: #15803D; letter-spacing: 0.3px; }
+</style>
+</head>
+<body>
+<div class="page">
+<svg viewBox="0 0 1190 842" xmlns="http://www.w3.org/2000/svg" role="img">
+
+<defs>
+  <marker id="ah" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+    <path d="M0,0 L8,4 L0,8 Z" fill="#9AA3AE"/>
+  </marker>
+  <marker id="ahr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+    <path d="M0,0 L8,4 L0,8 Z" fill="#D9537A"/>
+  </marker>
+  <symbol id="ic-agent" viewBox="0 0 24 24">
+    <rect x="4" y="8" width="16" height="12" rx="3.5" fill="currentColor"/>
+    <circle cx="9.2" cy="13.5" r="1.7" fill="#FFFFFF"/><circle cx="14.8" cy="13.5" r="1.7" fill="#FFFFFF"/>
+    <rect x="9" y="16.6" width="6" height="1.6" rx="0.8" fill="#FFFFFF"/>
+    <rect x="11.2" y="4.6" width="1.6" height="3.6" fill="currentColor"/><circle cx="12" cy="3.6" r="1.7" fill="currentColor"/>
+  </symbol>
+  <symbol id="ic-person" viewBox="0 0 24 24">
+    <circle cx="12" cy="7.5" r="4.2" fill="currentColor"/>
+    <path d="M3.5 21c0-4.6 3.8-7.8 8.5-7.8s8.5 3.2 8.5 7.8z" fill="currentColor"/>
+  </symbol>
+  <symbol id="ic-assisted" viewBox="0 0 24 24">
+    <g transform="translate(0,1.5) scale(0.74)">
+      <rect x="4" y="8" width="16" height="12" rx="3.5" fill="currentColor"/>
+      <circle cx="9.2" cy="13.5" r="1.7" fill="#FFFFFF"/><circle cx="14.8" cy="13.5" r="1.7" fill="#FFFFFF"/>
+      <rect x="9" y="16.6" width="6" height="1.6" rx="0.8" fill="#FFFFFF"/>
+      <rect x="11.2" y="4.6" width="1.6" height="3.6" fill="currentColor"/><circle cx="12" cy="3.6" r="1.7" fill="currentColor"/>
+    </g>
+    <circle cx="17.2" cy="16.8" r="7.2" fill="#FFFFFF"/>
+    <g transform="translate(11.2,10.8) scale(0.5)">
+      <circle cx="12" cy="7.5" r="4.2" fill="currentColor"/>
+      <path d="M3.5 21c0-4.6 3.8-7.8 8.5-7.8s8.5 3.2 8.5 7.8z" fill="currentColor"/>
+    </g>
+  </symbol>
+  <symbol id="ic-gear" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="7" fill="none" stroke="currentColor" stroke-width="4.2" stroke-dasharray="3.1 2.4"/>
+    <circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2.2"/>
+  </symbol>
+  <symbol id="ic-doc" viewBox="0 0 24 24">
+    <path d="M6 3h8l5 5v13H6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M14 3v5h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M9 13h6M9 16.5h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="ic-check" viewBox="0 0 24 24">
+    <path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+</defs>
+
+<g><path d="M54,396 H1164 A18,18 0 0 1 1182,414 V642 A18,18 0 0 1 1164,660 H395.33333333333337 A18,18 0 0 0 377.33333333333337,678 V780 A18,18 0 0 1 359.33333333333337,798 H54 A18,18 0 0 1 36,780 V414 A18,18 0 0 1 54,396 Z" fill="#ECEEF2" stroke="#E1E5EB" stroke-width="1"/><path d="M47,389 H1157 A18,18 0 0 1 1175,407 V635 A18,18 0 0 1 1157,653 H388.33333333333337 A18,18 0 0 0 370.33333333333337,671 V773 A18,18 0 0 1 352.33333333333337,791 H47 A18,18 0 0 1 29,773 V407 A18,18 0 0 1 47,389 Z" fill="#F2F4F7" stroke="#E1E5EB" stroke-width="1"/><path d="M40,382 H1150 A18,18 0 0 1 1168,400 V628 A18,18 0 0 1 1150,646 H381.33333333333337 A18,18 0 0 0 363.33333333333337,664 V766 A18,18 0 0 1 345.33333333333337,784 H40 A18,18 0 0 1 22,766 V400 A18,18 0 0 1 40,382 Z" fill="#FAFBFC" stroke="#DFE3E9" stroke-width="1"/></g>
+<g><line x1="175.5" y1="76.0" x2="183.41666666666666" y2="76.0" stroke="#9AA3AE" stroke-width="1.6" marker-end="url(#ah)"/>
+<line x1="359.41666666666663" y1="76.0" x2="367.3333333333333" y2="76.0" stroke="#9AA3AE" stroke-width="1.6" marker-end="url(#ah)"/>
+<line x1="432.3333333333333" y1="76.0" x2="440.25" y2="76.0" stroke="#9AA3AE" stroke-width="1.6" marker-end="url(#ah)"/>
+<line x1="604.25" y1="76.0" x2="612.1666666666666" y2="76.0" stroke="#9AA3AE" stroke-width="1.6" marker-end="url(#ah)"/>
+<line x1="788.1666666666666" y1="76.0" x2="796.0833333333333" y2="76.0" stroke="#9AA3AE" stroke-width="1.6" marker-end="url(#ah)"/>
+<line x1="973.0833333333333" y1="76.0" x2="981.0" y2="76.0" stroke="#9AA3AE" stroke-width="1.6" marker-end="url(#ah)"/>
+<line x1="979.0" y1="224.0" x2="640.5" y2="224.0" stroke="#9AA3AE" stroke-width="1.6" marker-end="url(#ah)"/>
+<line x1="553.5" y1="224.0" x2="215.0" y2="224.0" stroke="#9AA3AE" stroke-width="1.6" marker-end="url(#ah)"/>
+<line x1="213.0" y1="460.0" x2="222.33333333333334" y2="460.0" stroke="#9AA3AE" stroke-width="1.6" marker-end="url(#ah)"/>
+<line x1="346.33333333333337" y1="460.0" x2="355.6666666666667" y2="460.0" stroke="#9AA3AE" stroke-width="1.6" marker-end="url(#ah)"/>
+<line x1="531.6666666666667" y1="460.0" x2="541.0" y2="460.0" stroke="#9AA3AE" stroke-width="1.6" marker-end="url(#ah)"/>
+<line x1="653.0" y1="460.0" x2="662.3333333333334" y2="460.0" stroke="#9AA3AE" stroke-width="1.6" marker-end="url(#ah)"/>
+<line x1="838.3333333333334" y1="460.0" x2="847.6666666666667" y2="460.0" stroke="#9AA3AE" stroke-width="1.6" marker-end="url(#ah)"/>
+<line x1="965.6666666666667" y1="460.0" x2="975.0" y2="460.0" stroke="#9AA3AE" stroke-width="1.6" marker-end="url(#ah)"/>
+<line x1="993.0" y1="602.0" x2="980.8333333333334" y2="602.0" stroke="#9AA3AE" stroke-width="1.6" marker-end="url(#ah)"/>
+<line x1="818.8333333333334" y1="602.0" x2="806.6666666666667" y2="602.0" stroke="#9AA3AE" stroke-width="1.6" marker-end="url(#ah)"/>
+<line x1="684.6666666666667" y1="602.0" x2="672.5000000000001" y2="602.0" stroke="#9AA3AE" stroke-width="1.6" marker-end="url(#ah)"/>
+<line x1="498.5000000000001" y1="602.0" x2="486.3333333333334" y2="602.0" stroke="#9AA3AE" stroke-width="1.6" marker-end="url(#ah)"/>
+<line x1="387.3333333333334" y1="602.0" x2="375.16666666666674" y2="602.0" stroke="#9AA3AE" stroke-width="1.6" marker-end="url(#ah)"/>
+<line x1="201.16666666666674" y1="602.0" x2="189.0" y2="602.0" stroke="#9AA3AE" stroke-width="1.6" marker-end="url(#ah)"/>
+<line x1="213.0" y1="744.0" x2="222.33333333333334" y2="744.0" stroke="#9AA3AE" stroke-width="1.6" marker-end="url(#ah)"/>
+<line x1="340.33333333333337" y1="744.0" x2="395.66666666666663" y2="744.0" stroke="#9AA3AE" stroke-width="1.6" marker-end="url(#ah)"/>
+<line x1="571.6666666666666" y1="744.0" x2="581.0" y2="744.0" stroke="#9AA3AE" stroke-width="1.6" marker-end="url(#ah)"/>
+<line x1="723.0" y1="744.0" x2="732.3333333333334" y2="744.0" stroke="#9AA3AE" stroke-width="1.6" marker-end="url(#ah)"/>
+<line x1="896.3333333333334" y1="744.0" x2="905.6666666666667" y2="744.0" stroke="#9AA3AE" stroke-width="1.6" marker-end="url(#ah)"/>
+<line x1="1064.0" y1="107" x2="1064.0" y2="191" stroke="#9AA3AE" stroke-width="1.6" marker-end="url(#ah)"/>
+<line x1="1064.0" y1="491" x2="1064.0" y2="569" stroke="#9AA3AE" stroke-width="1.6" marker-end="url(#ah)"/>
+<line x1="126.0" y1="633" x2="126.0" y2="711" stroke="#9AA3AE" stroke-width="1.6" marker-end="url(#ah)"/>
+<path d="M885.5833333333333,92.0 V150.0 H581.7916666666666" fill="none" stroke="#9AA3AE" stroke-width="1.6"/>
+<path d="M429.79166666666663,150.0 H126.0 V191" fill="none" stroke="#9AA3AE" stroke-width="1.6" marker-end="url(#ah)"/>
+<line x1="126.0" y1="255" x2="126.0" y2="263.0" stroke="#9AA3AE" stroke-width="1.6" marker-end="url(#ah)"/>
+<line x1="126.0" y1="297.0" x2="126.0" y2="305.0" stroke="#9AA3AE" stroke-width="1.6" marker-end="url(#ah)"/>
+<line x1="126.0" y1="369.0" x2="126.0" y2="427" stroke="#9AA3AE" stroke-width="1.6" marker-end="url(#ah)"/>
+<text x="136.0" y="402.0" class="lbl">opens a lane once its predecessors are merged</text>
+<path d="M701.1666666666666,45 V30 H272.41666666666663 V42" fill="none" stroke="#D9537A" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#ahr)"/>
+<text x="486.79166666666663" y="26" class="rw halo" text-anchor="middle">criterion not testable</text>
+<path d="M751.3333333333334,429 V414 H435.6666666666667 V426" fill="none" stroke="#D9537A" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#ahr)"/>
+<text x="593.5" y="410" class="rw halo" text-anchor="middle">checks failed</text>
+<path d="M1064.0,429 V398 H453.6666666666667 V426" fill="none" stroke="#D9537A" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#ahr)"/>
+<text x="758.8333333333334" y="394" class="rw halo" text-anchor="middle">changes requested</text>
+<path d="M897.8333333333334,571 V554 H117.0 V494" fill="none" stroke="#D9537A" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#ahr)"/>
+<text x="507.4166666666667" y="550" class="rw halo" text-anchor="middle">rejected</text>
+<path d="M286.16666666666674,571 V538 H135.0 V494" fill="none" stroke="#D9537A" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#ahr)"/>
+<text x="210.58333333333337" y="534" class="rw halo" text-anchor="middle">not accepted</text>
+<text x="369.0" y="734.0" class="lbl" text-anchor="middle">all slices</text>
+<rect x="77.5" y="61.0" width="97" height="30" rx="15" fill="#FFFFFF" stroke="#D3D8E0" stroke-width="1.3"/>
+<use href="#ic-doc" x="88.5" y="69.0" width="14" height="14" color="#6B7280"/>
+<text x="107.5" y="80.5" class="art">User input</text>
+<rect x="186.41666666666666" y="46" width="172" height="60" rx="12" fill="#FFF4D6" stroke="#F5CF7E" stroke-width="1.3"/>
+<circle cx="208.41666666666666" cy="76.0" r="12" fill="#FFFFFF" stroke="#F5CF7E" stroke-width="1"/>
+<use href="#ic-assisted" x="199.91666666666666" y="67.5" width="17" height="17" color="#B45309"/>
+<text x="228.41666666666666" y="71.5" class="name">Epic writing</text>
+<text x="228.41666666666666" y="87.5" class="skill">/epic-writer</text>
+<rect x="370.3333333333333" y="61.0" width="61" height="30" rx="15" fill="#FFFFFF" stroke="#D3D8E0" stroke-width="1.3"/>
+<use href="#ic-doc" x="381.3333333333333" y="69.0" width="14" height="14" color="#6B7280"/>
+<text x="400.3333333333333" y="80.5" class="art">EPIC</text>
+<path d="M456.25,46 H590.25 L603.25,76.0 L590.25,106 H456.25 L443.25,76.0 Z" fill="#E3F7EA" stroke="#A3DDB8" stroke-width="1.3" stroke-linejoin="round"/>
+<circle cx="471.25" cy="76.0" r="12" fill="#FFFFFF" stroke="#A3DDB8" stroke-width="1"/>
+<use href="#ic-person" x="462.75" y="67.5" width="17" height="17" color="#15803D"/>
+<text x="491.25" y="65.25" class="name">Sponsor</text>
+<text x="491.25" y="77.75" class="name">approval</text>
+<text x="491.25" y="93.75" class="sub">go / no-go</text>
+<rect x="615.1666666666666" y="46" width="172" height="60" rx="12" fill="#FFF4D6" stroke="#F5CF7E" stroke-width="1.3"/>
+<circle cx="637.1666666666666" cy="76.0" r="12" fill="#FFFFFF" stroke="#F5CF7E" stroke-width="1"/>
+<use href="#ic-assisted" x="628.6666666666666" y="67.5" width="17" height="17" color="#B45309"/>
+<text x="657.1666666666666" y="60.0" class="name">Target</text>
+<text x="657.1666666666666" y="72.5" class="name">architecture</text>
+<text x="657.1666666666666" y="88.5" class="skill">/system-design</text>
+<text x="657.1666666666666" y="99.0" class="skill">/rfc-2119-requirements</text>
+<rect x="799.0833333333333" y="61.0" width="173" height="30" rx="15" fill="#FFFFFF" stroke="#D3D8E0" stroke-width="1.3"/>
+<use href="#ic-doc" x="810.0833333333333" y="69.0" width="14" height="14" color="#6B7280"/>
+<text x="829.0833333333333" y="80.5" class="art">Technical specification</text>
+<path d="M997.0,46 H1131.0 L1144.0,76.0 L1131.0,106 H997.0 L984.0,76.0 Z" fill="#E3F7EA" stroke="#A3DDB8" stroke-width="1.3" stroke-linejoin="round"/>
+<circle cx="1012.0" cy="76.0" r="12" fill="#FFFFFF" stroke="#A3DDB8" stroke-width="1"/>
+<use href="#ic-person" x="1003.5" y="67.5" width="17" height="17" color="#15803D"/>
+<text x="1032.0" y="65.25" class="name">Architect</text>
+<text x="1032.0" y="77.75" class="name">sign-off</text>
+<text x="1032.0" y="93.75" class="sub">go / no-go</text>
+<rect x="978.0" y="194" width="172" height="60" rx="12" fill="#EFEAFE" stroke="#CDBDFB" stroke-width="1.3"/>
+<circle cx="1000.0" cy="224.0" r="12" fill="#FFFFFF" stroke="#CDBDFB" stroke-width="1"/>
+<use href="#ic-agent" x="991.5" y="215.5" width="17" height="17" color="#6D28D9"/>
+<text x="1020.0" y="219.5" class="name">Task splitting</text>
+<text x="1020.0" y="235.5" class="skill">/activity-dependency-dag</text>
+<rect x="552.5" y="209.0" width="85" height="30" rx="15" fill="#FFFFFF" stroke="#D3D8E0" stroke-width="1.3"/>
+<use href="#ic-doc" x="563.5" y="217.0" width="14" height="14" color="#6B7280"/>
+<text x="582.5" y="228.5" class="art">Task DAG</text>
+<rect x="40.0" y="194" width="172" height="60" rx="12" fill="#EFEAFE" stroke="#CDBDFB" stroke-width="1.3"/>
+<circle cx="62.0" cy="224.0" r="12" fill="#FFFFFF" stroke="#CDBDFB" stroke-width="1"/>
+<use href="#ic-agent" x="53.5" y="215.5" width="17" height="17" color="#6D28D9"/>
+<text x="82.0" y="214.25" class="name">Slice grouping</text>
+<text x="82.0" y="230.25" class="skill">/slice-grouper</text>
+<text x="82.0" y="240.75" class="skill">one criterion per slice</text>
+<rect x="40.0" y="430" width="172" height="60" rx="12" fill="#EFEAFE" stroke="#CDBDFB" stroke-width="1.3"/>
+<circle cx="62.0" cy="460.0" r="12" fill="#FFFFFF" stroke="#CDBDFB" stroke-width="1"/>
+<use href="#ic-agent" x="53.5" y="451.5" width="17" height="17" color="#6D28D9"/>
+<text x="82.0" y="450.25" class="name">Ticket writing</text>
+<text x="82.0" y="466.25" class="skill">/atomic-ticket-writing</text>
+<text x="82.0" y="476.75" class="skill">disjoint write sets</text>
+<rect x="225.33333333333334" y="445.0" width="120" height="30" rx="15" fill="#FFFFFF" stroke="#D3D8E0" stroke-width="1.3"/>
+<use href="#ic-doc" x="236.33333333333334" y="453.0" width="14" height="14" color="#6B7280"/>
+<text x="255.33333333333334" y="464.5" class="art">Atomic tickets</text>
+<rect x="358.6666666666667" y="430" width="172" height="60" rx="12" fill="#EFEAFE" stroke="#CDBDFB" stroke-width="1.3"/>
+<circle cx="380.6666666666667" cy="460.0" r="12" fill="#FFFFFF" stroke="#CDBDFB" stroke-width="1"/>
+<use href="#ic-agent" x="372.1666666666667" y="451.5" width="17" height="17" color="#6D28D9"/>
+<text x="400.6666666666667" y="450.25" class="name">Implementation</text>
+<text x="400.6666666666667" y="466.25" class="skill">/implementation-of-atomic</text>
+<text x="400.6666666666667" y="476.75" class="skill">rebase on main</text>
+<rect x="544.0" y="445.0" width="108" height="30" rx="15" fill="#FFFFFF" stroke="#D3D8E0" stroke-width="1.3"/>
+<use href="#ic-doc" x="555.0" y="453.0" width="14" height="14" color="#6B7280"/>
+<text x="574.0" y="464.5" class="art">Pull request</text>
+<rect x="665.3333333333334" y="430" width="172" height="60" rx="12" fill="#EAF0F6" stroke="#C4D0DE" stroke-width="1.3"/>
+<circle cx="687.3333333333334" cy="460.0" r="12" fill="#FFFFFF" stroke="#C4D0DE" stroke-width="1"/>
+<use href="#ic-gear" x="678.8333333333334" y="451.5" width="17" height="17" color="#475569"/>
+<text x="707.3333333333334" y="444.0" class="name">Continuous</text>
+<text x="707.3333333333334" y="456.5" class="name">integration</text>
+<text x="707.3333333333334" y="472.5" class="sub">build · tests · lint</text>
+<text x="707.3333333333334" y="483.0" class="sub">security scan</text>
+<rect x="850.6666666666667" y="445.0" width="114" height="30" rx="15" fill="#FFFFFF" stroke="#D3D8E0" stroke-width="1.3"/>
+<use href="#ic-doc" x="861.6666666666667" y="453.0" width="14" height="14" color="#6B7280"/>
+<text x="880.6666666666667" y="464.5" class="art">Checks passed</text>
+<rect x="978.0" y="430" width="172" height="60" rx="12" fill="#EFEAFE" stroke="#CDBDFB" stroke-width="1.3"/>
+<circle cx="1000.0" cy="460.0" r="12" fill="#FFFFFF" stroke="#CDBDFB" stroke-width="1"/>
+<use href="#ic-agent" x="991.5" y="451.5" width="17" height="17" color="#6D28D9"/>
+<text x="1020.0" y="450.25" class="name">Review</text>
+<text x="1020.0" y="466.25" class="skill">/review</text>
+<text x="1020.0" y="476.75" class="skill">EPIC + slice context</text>
+<rect x="992.0" y="587.0" width="144" height="30" rx="15" fill="#FFFFFF" stroke="#D3D8E0" stroke-width="1.3"/>
+<use href="#ic-doc" x="1003.0" y="595.0" width="14" height="14" color="#6B7280"/>
+<text x="1022.0" y="606.5" class="art">PR + review report</text>
+<path d="M830.8333333333334,572 H964.8333333333334 L977.8333333333334,602.0 L964.8333333333334,632 H830.8333333333334 L817.8333333333334,602.0 Z" fill="#E3F7EA" stroke="#A3DDB8" stroke-width="1.3" stroke-linejoin="round"/>
+<circle cx="845.8333333333334" cy="602.0" r="12" fill="#FFFFFF" stroke="#A3DDB8" stroke-width="1"/>
+<use href="#ic-person" x="837.3333333333334" y="593.5" width="17" height="17" color="#15803D"/>
+<text x="865.8333333333334" y="591.25" class="name">Merge</text>
+<text x="865.8333333333334" y="603.75" class="name">validation</text>
+<text x="865.8333333333334" y="619.75" class="sub">merge queue</text>
+<rect x="683.6666666666667" y="587.0" width="120" height="30" rx="15" fill="#FFFFFF" stroke="#D3D8E0" stroke-width="1.3"/>
+<use href="#ic-doc" x="694.6666666666667" y="595.0" width="14" height="14" color="#6B7280"/>
+<text x="713.6666666666667" y="606.5" class="art">Merged on main</text>
+<rect x="497.5000000000001" y="572" width="172" height="60" rx="12" fill="#EAF0F6" stroke="#C4D0DE" stroke-width="1.3"/>
+<circle cx="519.5000000000001" cy="602.0" r="12" fill="#FFFFFF" stroke="#C4D0DE" stroke-width="1"/>
+<use href="#ic-gear" x="511.0000000000001" y="593.5" width="17" height="17" color="#475569"/>
+<text x="539.5000000000001" y="597.5" class="name">Deploy to staging</text>
+<text x="539.5000000000001" y="613.5" class="sub">on every merge</text>
+<rect x="386.3333333333334" y="587.0" width="97" height="30" rx="15" fill="#FFFFFF" stroke="#D3D8E0" stroke-width="1.3"/>
+<use href="#ic-doc" x="397.3333333333334" y="595.0" width="14" height="14" color="#6B7280"/>
+<text x="416.3333333333334" y="606.5" class="art">On staging</text>
+<rect x="200.16666666666674" y="572" width="172" height="60" rx="12" fill="#FFF4D6" stroke="#F5CF7E" stroke-width="1.3"/>
+<circle cx="222.16666666666674" cy="602.0" r="12" fill="#FFFFFF" stroke="#F5CF7E" stroke-width="1"/>
+<use href="#ic-assisted" x="213.66666666666674" y="593.5" width="17" height="17" color="#B45309"/>
+<text x="242.16666666666674" y="592.25" class="name">Slice acceptance</text>
+<text x="242.16666666666674" y="608.25" class="skill">/slice-acceptance</text>
+<text x="242.16666666666674" y="618.75" class="skill">against its criterion</text>
+<rect x="66.0" y="587.0" width="120" height="30" rx="15" fill="#FFFFFF" stroke="#D3D8E0" stroke-width="1.3"/>
+<use href="#ic-doc" x="77.0" y="595.0" width="14" height="14" color="#6B7280"/>
+<text x="96.0" y="606.5" class="art">Slice accepted</text>
+<rect x="40.0" y="714" width="172" height="60" rx="12" fill="#EAF0F6" stroke="#C4D0DE" stroke-width="1.3"/>
+<circle cx="62.0" cy="744.0" r="12" fill="#FFFFFF" stroke="#C4D0DE" stroke-width="1"/>
+<use href="#ic-gear" x="53.5" y="735.5" width="17" height="17" color="#475569"/>
+<text x="82.0" y="739.5" class="name">Production release</text>
+<text x="82.0" y="755.5" class="sub">promote after acceptance</text>
+<rect x="225.33333333333334" y="729.0" width="114" height="30" rx="15" fill="#FFFFFF" stroke="#D3D8E0" stroke-width="1.3"/>
+<use href="#ic-doc" x="236.33333333333334" y="737.0" width="14" height="14" color="#6B7280"/>
+<text x="255.33333333333334" y="748.5" class="art">In production</text>
+<rect x="398.66666666666663" y="714" width="172" height="60" rx="12" fill="#FFF4D6" stroke="#F5CF7E" stroke-width="1.3"/>
+<circle cx="420.66666666666663" cy="744.0" r="12" fill="#FFFFFF" stroke="#F5CF7E" stroke-width="1"/>
+<use href="#ic-assisted" x="412.16666666666663" y="735.5" width="17" height="17" color="#B45309"/>
+<text x="440.66666666666663" y="739.5" class="name">EPIC validation</text>
+<text x="440.66666666666663" y="755.5" class="skill">/epic-validation</text>
+<rect x="584.0" y="729.0" width="138" height="30" rx="15" fill="#FFFFFF" stroke="#D3D8E0" stroke-width="1.3"/>
+<use href="#ic-doc" x="595.0" y="737.0" width="14" height="14" color="#6B7280"/>
+<text x="614.0" y="748.5" class="art">Acceptance report</text>
+<path d="M748.3333333333334,714 H882.3333333333334 L895.3333333333334,744.0 L882.3333333333334,774 H748.3333333333334 L735.3333333333334,744.0 Z" fill="#E3F7EA" stroke="#A3DDB8" stroke-width="1.3" stroke-linejoin="round"/>
+<circle cx="763.3333333333334" cy="744.0" r="12" fill="#FFFFFF" stroke="#A3DDB8" stroke-width="1"/>
+<use href="#ic-person" x="754.8333333333334" y="735.5" width="17" height="17" color="#15803D"/>
+<text x="783.3333333333334" y="733.25" class="name">Final</text>
+<text x="783.3333333333334" y="745.75" class="name">acceptance</text>
+<text x="783.3333333333334" y="761.75" class="sub">product owner</text>
+<rect x="908.6666666666667" y="726.0" width="100" height="36" rx="18" fill="#DCFCE7" stroke="#16A34A" stroke-width="1.6"/>
+<use href="#ic-check" x="923.6666666666667" y="735.0" width="18" height="18" color="#15803D"/>
+<text x="948.6666666666667" y="750.0" class="done">Done</text>
+<rect x="430.79166666666663" y="135.0" width="150" height="30" rx="15" fill="#FFFFFF" stroke="#D3D8E0" stroke-width="1.3"/>
+<use href="#ic-doc" x="441.79166666666663" y="143.0" width="14" height="14" color="#6B7280"/>
+<text x="460.79166666666663" y="154.5" class="art">Verifiable criteria</text>
+<rect x="36.5" y="266.0" width="179" height="30" rx="15" fill="#FFFFFF" stroke="#D3D8E0" stroke-width="1.3"/>
+<use href="#ic-doc" x="47.5" y="274.0" width="14" height="14" color="#6B7280"/>
+<text x="66.5" y="285.5" class="art">Ordered shippable slices</text>
+<rect x="40.0" y="308.0" width="172" height="60" rx="12" fill="#EAF0F6" stroke="#C4D0DE" stroke-width="1.3"/>
+<circle cx="62.0" cy="338.0" r="12" fill="#FFFFFF" stroke="#C4D0DE" stroke-width="1"/>
+<use href="#ic-gear" x="53.5" y="329.5" width="17" height="17" color="#475569"/>
+<text x="82.0" y="328.25" class="name">Lane scheduler</text>
+<text x="82.0" y="344.25" class="sub">one lane per</text>
+<text x="82.0" y="354.75" class="sub">independent slice</text></g>
+<g><rect x="40" y="806" width="20" height="20" rx="6" fill="#EFEAFE" stroke="#CDBDFB" stroke-width="1"/>
+<use href="#ic-agent" x="43" y="809" width="14" height="14" color="#6D28D9"/>
+<text x="68" y="820.5" class="leg">Agent</text>
+<rect x="158" y="806" width="20" height="20" rx="6" fill="#FFF4D6" stroke="#F5CF7E" stroke-width="1"/>
+<use href="#ic-assisted" x="161" y="809" width="14" height="14" color="#B45309"/>
+<text x="186" y="820.5" class="leg">Agent with a human in the loop</text>
+<rect x="396" y="806" width="20" height="20" rx="6" fill="#E3F7EA" stroke="#A3DDB8" stroke-width="1"/>
+<use href="#ic-person" x="399" y="809" width="14" height="14" color="#15803D"/>
+<text x="424" y="820.5" class="leg">Human</text>
+<rect x="510" y="806" width="20" height="20" rx="6" fill="#EAF0F6" stroke="#C4D0DE" stroke-width="1"/>
+<use href="#ic-gear" x="513" y="809" width="14" height="14" color="#475569"/>
+<text x="538" y="820.5" class="leg">Automated pipeline</text>
+<rect x="696" y="806" width="20" height="20" rx="10" fill="#FFFFFF" stroke="#D3D8E0" stroke-width="1"/>
+<use href="#ic-doc" x="700" y="810" width="12" height="12" color="#6B7280"/>
+<text x="724" y="820.5" class="leg">Artifact</text>
+<line x1="810" y1="816" x2="830" y2="816" stroke="#D9537A" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="838" y="820.5" class="leg">Rework</text></g>
+</svg>
+</div>
+</body>
+</html>
